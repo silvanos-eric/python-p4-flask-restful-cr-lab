@@ -10,4 +10,4 @@ class Plant(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, nullable=False)
     image = db.Column(db.String)
-    price = db.Column(db.String)
+    price = db.Column(db.Float)
