@@ -36,7 +36,7 @@ class Plants(Resource):
 class PlantByID(Resource):
 
     def get(self, id):
-        return Plant.query.get(id).to_dict()
+        return db.session.get(Plant, id).to_dict()
 
 
 api.add_resource(Plants, '/plants')
